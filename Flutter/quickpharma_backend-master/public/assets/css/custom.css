@@ -1,0 +1,242 @@
+body {
+  font-family: "Lato", sans-serif !important;
+}
+
+:root {
+  --brinjal-color: #63365d;
+  --maroon-color: #5d100a;
+  --maroon-color-30: #5d100a30;
+}
+
+.btn-rounded {
+  border-radius: 50px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.float-right {
+  float: right;
+}
+
+.border-radius-10 {
+  border-radius: 10px;
+}
+
+.border-radius-50 {
+  border-radius: 50px !important;
+}
+
+.border-radius-100 {
+  border-radius: 100px;
+}
+
+.app-sidebar-toggle {
+  border: 1px solid #ffffff !important;
+}
+
+.btn.btn-active-color-primary:hover:not(.btn-active) {
+  background-color: #ffe77b !important;
+}
+
+.btn.btn-active-color-primary.active .svg-icon {
+  color: #ffe77b;
+}
+
+.box-shadow-custom {
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 12%);
+}
+
+.card-login {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px) !important;
+}
+
+.store-in-fridge {
+  display: none;
+}
+
+.include-insurance {
+  display: none;
+}
+
+.route-stats-cell {
+  display: inline-block;
+  background: #efefef;
+  border-right: 1px solid white;
+  min-width: 8px;
+}
+
+.route-stats {
+  margin-top: -8px;
+  color: black;
+  font-size: 9px;
+  background: #efefef;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid green;
+}
+
+.btn-gray {
+  color: #fff;
+  border-color: var(--bs-gray);
+  background-color: var(--bs-gray);
+}
+.btn-gray-light {
+  color: #fff;
+  border-color: var(--bs-gray-400);
+  background-color: var(--bs-gray-400);
+}
+
+.btn-outline-brinjal {
+  color: var(--brinjal-color);
+  border-color: var(--brinjal-color) !important;
+  background-color: transparent;
+}
+
+.btn-outline-brinjal:hover,
+.btn-outline-brinjal.active {
+  background-color: var(--maroon-color-30) !important;
+}
+
+.btn-outline-maroon {
+  color: var(--maroon-color);
+  border-color: var(--maroon-color) !important;
+  background-color: transparent;
+}
+
+.btn-outline-maroon:hover,
+.btn-outline-maroon.active {
+  background-color: var(--maroon-color-30) !important;
+}
+
+.btn-outline-gray.active {
+  background-color: var(--kt-gray-300) !important;
+}
+
+/* CSS FOR MAP-FILTER-OPTIONS -- START */
+.status-main-menu:hover,
+.status-main-menu.active {
+  color: white;
+  background-color: var(--kt-theme-color);
+}
+.status-main-menu:hover i,
+.status-main-menu.active i {
+  color: white !important;
+}
+/* CSS FOR MAP-FILTER-OPTIONS -- END */
+
+/* Order Status List */
+#order_status_list li .btn.active {
+  background-color: #ffe77b !important;
+  border-color: #ffe77b !important;
+  color: var(--brinjal-color) !important;
+}
+
+/* ORDER_STATUS_COLOR */
+.badge-brinjal {
+  color: var(--kt-success-inverse);
+  background-color: var(--brinjal-color);
+}
+.badge-maroon {
+  color: var(--kt-success-inverse);
+  background-color: var(--maroon-color);
+}
+
+/* Routes page */
+.leaflet-div-icon img {
+  height: 35px;
+  max-height: 35px;
+  width: 35px;
+  max-width: 35px;
+}
+
+.leaflet-div-icon img {
+  opacity: 0.9;
+}
+
+.leaflet-marker-icon .number {
+  position: relative;
+  top: -40px;
+  color: #fff;
+  font-size: 14px;
+  /* width: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.list-style-none {
+  list-style: none;
+}
+
+.flex-list-details {
+  width: 1em;
+  margin: 0 6px 0 0;
+}
+
+.spin-right {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+
+/* For Login page inputs */
+.card-login .form-control,
+.card-login .form-control:focus,
+.form-check-input:checked + span,
+.card-login .form-check-input:checked + label {
+  color: #fff;
+}
+
+input[type="password"] {
+  -webkit-text-security: disc;
+}
+
+/* Routes page -- Drivers image in map */
+.driver-masked-photo-div img {
+  width: 190px;
+  max-width: 190px;
+  height: 250px;
+  max-height: 250px;
+}
+.icon-img img::before {
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  animation: pulse-black 1s infinite;
+}
+.icon-img img {
+  width: 35px;
+  height: 35px;
+  max-height: 35px;
+  max-width: 35px;
+  border-radius: 50%;
+  background: rgba(52, 172, 224, 1);
+  box-shadow: 0 0 0 0 rgba(5, 124, 255, 1);
+  animation: pulse-blue 1s infinite;
+}
+@keyframes pulse-blue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 124, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(5, 124, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 124, 255, 0);
+  }
+}

@@ -1,0 +1,172 @@
+
+====================================================
+
+URL :: https://quickpharmaceutical.com/api/function_name
+
+1.  Driver Login
+2.  getOrder
+3.  updateOrder
+4.  update_user
+5.  get_user
+6.  forgot_password
+7.  reset_password
+8.  change_password
+9.  remove_order_document
+10. delete_user
+11. verify_otp
+12. dashboard_statistics
+13. get_system_settings
+14. get_regions
+15. update_my_route
+16. driver_statistics
+===================================================
+
+ Header :::  Authorization : Bearer {{ token}}   
+
+============================================================
+1. Driver Login
+    function_name : login
+    parameter :
+        username :   
+        password : 
+===========================================================
+2. getOrder
+     function_name : getOrder   
+     Authorization : Bearer {{ token}}  
+     parameter :
+        offset:             //optional
+        limit:              //optional
+        id:                 //optional
+        search:             //optional 
+        status:             //optional   ['Delivered', 'Delivery Attempted', 'Returned', 'Rejected', 'Back to Pharmacy', 'On Its Way To Facility','Not Present','Recipient Refused','Skipped','Wrong Address']
+        regions_id          //optional 
+==========================================================
+3. updateOrder      
+     function_name : updateOrder   
+     Authorization : Bearer {{ token}}  
+
+
+     order_id:1000                          || required
+     attachfile[]                           || //optional   | Attach photo (document)
+     attachsignature[]                      || //optional   | Attach signature (document)
+     copay[]                                || //optional   | Copay (document)
+     fridge[]                               || //optional   | fridge (document)
+     contents:23423242                      || //optional 
+     note_added:2023-01-03                  || //optional  | Date  
+     is_copay_payed: No                     || //optional  | Yes | No
+     status:Delivered                       || //optional  | ['Delivered', 'Delivery Attempted', 'Returned', 'Rejected', 'Back to Pharmacy', 'On Its Way To Facility','Not Present','Recipient Refused','Skipped','Wrong Address']
+     date_to_deliver:2023-01-03             || //optional  | 2023-01-03
+     order_activity:Delivered               || //optional  [ Delivered | Wrong Address | Not Present | Recipient Refused]
+     time_to_deliver:01:00                  || //optional  | 01:00
+==========================================================
+
+4. update_user:
+     function_name : update_user   
+     Authorization : Bearer {{ token}}  
+     parameter :
+          name :     || //optional
+          address:   || //optional
+          fcm_id:    || //optional
+          avatar:    || //optional
+          phone :   || //optional
+          email :   || //optional
+          username :   || //optional
+          latitude :   || //optional
+          longitude :   || //optional
+          app_settings : ||  //optional
+================================================================
+
+5. get_user:
+     function_name : get_user   
+     Authorization : Bearer {{ token}}
+
+===============================================================
+
+6. forgot_password
+     function_name : forgot/password   
+          parameter :
+               email : 
+
+=================================================================
+
+7. reset_password
+     function_name : reset/password
+          parameter :
+               email            : 
+               otp              :
+               password         :
+               conform_password :
+
+
+=================================================================
+
+8. change_password
+     function_name : change_password   
+     Authorization : Bearer {{ token}}  
+     parameter :
+         password         :
+         conform_password :
+         current_password :
+
+=================================================================
+
+9. remove_order_document
+     function_name : remove_order_document   
+     Authorization : Bearer {{ token}}  
+     parameter :
+        id:1000    || required
+        order_id:1000    || required
+
+
+================================================================
+
+10. delete_user
+     function_name : delete_user   
+     Authorization : Bearer {{ token}}
+
+
+=================================================================
+
+11. verify_otp
+     function_name : verify_otp   
+     parameter :
+               email            : 
+               otp              :
+
+=================================================================
+12. dashboard_statistics
+     function_name : dashboard_statistics   
+     Authorization : Bearer {{ token}}
+=================================================================     
+
+13. get_system_settings
+     function_name : get_system_settings   
+     parameter :
+               type            :    || about_app, terms_conditions, privacy_policy,company,maintenance
+
+==================================================================
+
+14. get_my_route
+     function_name : get_my_route 
+     Authorization : Bearer {{ token}}
+
+===================================================================
+15. update_my_route
+     function_name : update_my_route 
+     Authorization : Bearer {{ token}}
+
+      parameter :
+          regions_id : 
+          started:   :                  || optional
+          is_started :                  || Yes | No //optional
+          driver_current_location  :    || json
+          last_stop  :                  || datetime,
+          mask_photo :                  || File
+===================================================================
+
+16. driver_statistics          
+     function_name : driver_statistics 
+     Authorization : Bearer {{ token}}
+     parameter :
+          from :   // 2023-01-03
+          to   :   // 2023-01-03
